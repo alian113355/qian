@@ -19,7 +19,7 @@ public class JinShiTasks {
     @Autowired
     JinShiService jinShiService;
 
-    @Scheduled(cron = "0/50 * * * * ?")
+    @Scheduled(cron = "0/15 * * * * ?")
     public void reportCurrentTime() {
         log.info("reportCurrentTime begin {}", dateFormat.format(new Date()));
         jinShiService.volumesTask();
